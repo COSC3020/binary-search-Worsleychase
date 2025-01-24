@@ -8,6 +8,7 @@ Use the template in `code.js`. The tests in `code.test.js` will be run
 automatically every time you push to Github; if they pass you are done.
 
 I used ChatGPT-4 with the following prompt: "what does counter example mean?"
+
 Response:
   A counterexample in the context of property-based testing (e.g., with jsverify) is an input that violates the property you're testing. It is a concrete example of input data for which the function does not behave as expected.
 

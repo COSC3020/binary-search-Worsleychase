@@ -1,7 +1,10 @@
+/*
+Implement a binary search function that, given a sorted list and an element to look for, returns the index of the element in the list or -1 if the element is not there.
+*/
+
 function binarySearch(list, element) {
     if (list.length == 0) {return -1;}
 
-    console.log(element);
     var L = 0;
     var R = list.length - 1;
     while (R >= L) {
@@ -12,13 +15,12 @@ function binarySearch(list, element) {
         else if (list[m] > element){ // Go left
             R = m - 1;
         } else {
-            return m;
+            if (list[m-1] == element) {
+                R = m - 1;
+            } else {
+                return m;
+            }
         }
     }
     return -1;
 }
-console.log("binarySearch([20,20,20],20)=  " + binarySearch([20,20,20],20));
-console.log("binarySearch([20,20,20],50)= " + binarySearch([20,20,20],50));
-console.log("binarySearch([20,20,20],19) = " + binarySearch([20,20,20],19));
-console.log("binarySearch([20,20,20],-5)= " + binarySearch([20,20,20],-5));
-console.log("binarySearch([20,20,20],0) = " + binarySearch([20,20,20],0));
